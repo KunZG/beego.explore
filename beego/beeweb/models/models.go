@@ -439,10 +439,7 @@ func checkFileUpdates() error {
 
 		// Fetch files.
 		if err := getFiles(files); err != nil {
-			// Ignore this error, Continue to Fetch files.
-			beego.Error("models.checkFileUpdates -> fetch files: " + err.Error())
-			continue
-			//return errors.New("models.checkFileUpdates -> fetch files: " + err.Error())
+			return errors.New("models.checkFileUpdates -> fetch files: " + err.Error())
 		}
 
 		// Update data.

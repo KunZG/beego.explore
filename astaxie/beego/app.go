@@ -53,6 +53,51 @@ func NewApp() *App {
 
 // Run beego application.
 func (app *App) Run() {
+
+	// Added by Kun.Z for glancing BConfig
+	logs.Info("BConfig.AppName: ", BConfig.AppName)
+	logs.Info("BConfig.RunMode: ", BConfig.RunMode)
+	logs.Info("BConfig.RouterCaseSensitive: ", BConfig.RouterCaseSensitive)
+	logs.Info("BConfig.ServerName: ", BConfig.ServerName)
+	logs.Info("BConfig.RecoverFunc: ", BConfig.RecoverFunc)
+	logs.Info("BConfig.CopyRequestBody: ", BConfig.CopyRequestBody)
+	logs.Info("BConfig.EnableGzip: ", BConfig.EnableGzip)
+	logs.Info("BConfig.MaxMemory: ", BConfig.MaxMemory)
+	logs.Info("BConfig.EnableErrorsShow: ", BConfig.EnableErrorsShow)
+	logs.Info("BConfig.EnableErrorsRender: ", BConfig.EnableErrorsRender)
+	logs.Info("BConfig.Listen.Graceful: ", BConfig.Listen.Graceful)
+	logs.Info("BConfig.Listen.ServerTimeOut: ", BConfig.Listen.ServerTimeOut)
+	logs.Info("BConfig.Listen.ListenTCP4: ", BConfig.Listen.ListenTCP4)
+	logs.Info("BConfig.Listen.EnableHTTP: ", BConfig.Listen.EnableHTTP)
+	logs.Info("BConfig.Listen.HTTPAddr: ", BConfig.Listen.HTTPAddr)
+	logs.Info("BConfig.Listen.HTTPPort: ", BConfig.Listen.HTTPPort)
+	logs.Info("BConfig.Listen.EnableHTTPS: ", BConfig.Listen.EnableHTTPS)
+	logs.Info("BConfig.Listen.HTTPSAddr: ", BConfig.Listen.HTTPSAddr)
+	logs.Info("BConfig.Listen.HTTPSPort: ", BConfig.Listen.HTTPSPort)
+	logs.Info("BConfig.Listen.HTTPSCertFile: ", BConfig.Listen.HTTPSCertFile)
+	logs.Info("BConfig.Listen.HTTPSKeyFile: ", BConfig.Listen.HTTPSKeyFile)
+	logs.Info("BConfig.Listen.EnableAdmin: ", BConfig.Listen.EnableAdmin)
+	logs.Info("BConfig.Listen.AdminAddr: ", BConfig.Listen.AdminAddr)
+	logs.Info("BConfig.Listen.AdminPort: ", BConfig.Listen.AdminPort)
+	logs.Info("BConfig.Listen.EnableFcgi: ", BConfig.Listen.EnableFcgi)
+	logs.Info("BConfig.Listen.EnableStdIo: ", BConfig.Listen.EnableStdIo)
+	logs.Info("BConfig.WebConfig.AutoRender: ", BConfig.WebConfig.AutoRender)
+	logs.Info("BConfig.WebConfig.EnableDocs: ", BConfig.WebConfig.EnableDocs)
+	logs.Info("BConfig.WebConfig.FlashName: ", BConfig.WebConfig.FlashName)
+	logs.Info("BConfig.WebConfig.DirectoryIndex: ", BConfig.WebConfig.DirectoryIndex)
+	logs.Info("BConfig.WebConfig.StaticDir: ", BConfig.WebConfig.StaticDir)
+	logs.Info("BConfig.WebConfig.StaticExtensionsToGzip: ", BConfig.WebConfig.StaticExtensionsToGzip)
+	logs.Info("BConfig.WebConfig.TemplateLeft: ", BConfig.WebConfig.TemplateLeft)
+	logs.Info("BConfig.WebConfig.TemplateRight: ", BConfig.WebConfig.TemplateRight)
+	logs.Info("BConfig.WebConfig.ViewsPath: ", BConfig.WebConfig.ViewsPath)
+	logs.Info("BConfig.WebConfig.EnableXSRF: ", BConfig.WebConfig.EnableXSRF)
+	logs.Info("BConfig.WebConfig.XSRFKey: ", BConfig.WebConfig.XSRFKey)
+	logs.Info("BConfig.WebConfig.XSRFExpire: ", BConfig.WebConfig.XSRFExpire)
+	logs.Info("BConfig.WebConfig.Session: ", BConfig.WebConfig.Session)
+	logs.Info("BConfig.Log.AccessLogs: ", BConfig.Log.AccessLogs)
+	logs.Info("BConfig.Log.FileLineNum: ", BConfig.Log.FileLineNum)
+	logs.Info("BConfig.Log.Outputs: ", BConfig.Log.Outputs)
+
 	addr := BConfig.Listen.HTTPAddr
 
 	if BConfig.Listen.HTTPPort != 0 {
